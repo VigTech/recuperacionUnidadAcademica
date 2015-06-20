@@ -1,0 +1,37 @@
+clasificado mal 70 1                 bien         solo uno en 1
+clasificado mal 104 0                bien         Papers del CERN S Y O
+clasificado mal 180 0                bien         papers del CERN S Y O
+clasificado mal 567 1		     bien         solo A 37% relevante
+clasificado mal 705 1		     Bien         solo S por Zarama
+clasificado mal 713 1		     Bien         Solo S por Zarama
+clasificado mal 781 1                Bien         Solo S por Bohorquez
+clasificado mal 821 1                bien         solo A 37% relevante
+clasificado mal 985 1                Bien        Solo S por palacios
+clasificado mal 1038 0               Bien         S y O
+clasificado mal 1087 1               bien         solo A 37% relevante
+clasificado mal 1222 1               Bien         solo A 37% relevante
+clasificado mal 1320 1               Bien         Solo S por Zarama
+clasificado mal 1338 1               Bien         Solo S por Velasco
+clasificado mal 1433 1               Bien         solo A 37% relevante
+clasificado mal 1486 1               Bien         solo A 37% relevante    
+clasificado mal 1830 0               Bien         papers del CERN S Y O
+clasificado mal 1862 1               Bien         solo A 37% relevante 
+clasificado mal 1879 1               Bien         solo A 37% relevante 
+clasificado mal 1883 1               Bien         solo A 37% relevante 
+clasificado mal 1979 0               Bien         papers del CERN S Y O
+clasificado mal 2032 1               Bien         solo A 37% relevante 
+clasificado mal 2130 1               Bien         solo A 37% relevante 
+clasificado mal 2240 1               Bien         solo A 37% relevante 
+clasificado mal 2301 1               Bien         Solo S por Villalobos
+clasificado mal 2312 1               Bien         solo A 37% relevante 
+clasificado mal 2577 0               Raro         S y O Un Zarama,C.A
+clasificado mal 2782 1               Bien         solo A 37% relevante 
+clasificado mal 2975 1               Bien         solo A 37% relevante 
+clasificado mal 4005 0               Raro         S y O Un Amaya Cruz que entiendo es distindo a Amaya ciroalberto
+4482 4482
+Presicion: 0.905405405405
+Recall: 0.744444444444
+Accuracy: 0.993306559572
+Clasificados bien: 4452
+roc11: 0.998288554948
+

@@ -1,0 +1,1 @@
+Mejorar código en la parte en la que se comparan los id de los papers validados con los que están aun sin validad. (Se está haciendo un "in" o stringContains)
