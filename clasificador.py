@@ -224,8 +224,8 @@ class NaiveBayes:
             else:
                 print 'clasificado mal', i+1, self.clasificadosExperto[i]
             #print i
-        presicion1 = recuperadosYRelevantes/float(recuperados)
-        recall1 = recuperadosYRelevantes/float(relevantes)
+        #presicion1 = recuperadosYRelevantes/float(recuperados)
+        #recall1 = recuperadosYRelevantes/float(relevantes)
         #fpr = fp / float(negativos)
         print len(self.probabilidades1), len(self.clasificadosExperto)
         print self.clasificadosExperto
