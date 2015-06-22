@@ -28,7 +28,7 @@ def peticion_tesis_cesar():
     conceptos = '(TITLE-ABS-KEY(Constraint theory) OR TITLE-ABS-KEY(Problem solving) OR TITLE-ABS-KEY(Constraint programming) OR TITLE-ABS-KEY(Computer programming languages) OR TITLE-ABS-KEY(Logic programming) OR TITLE-ABS-KEY(Random access storage) OR TITLE-ABS-KEY(Computational geometry) OR TITLE-ABS-KEY(Collision detection) OR TITLE-ABS-KEY(Automatic translation) OR TITLE-ABS-KEY(Classification) OR TITLE-ABS-KEY(Software design) OR TITLE-ABS-KEY(User interfaces) OR TITLE-ABS-KEY(E-learning) OR TITLE-ABS-KEY(Virtual learning environment) OR TITLE-ABS-KEY(Adaptive evaluation) OR TITLE-ABS-KEY(Engineering education) OR TITLE-ABS-KEY(Learning system) OR TITLE-ABS-KEY(Recommender system) OR TITLE-ABS-KEY(Information retrieval) OR TITLE-ABS-KEY(Controlled natural language) OR TITLE-ABS-KEY(statistical parsing) OR TITLE-ABS-KEY(Data mining) OR TITLE-ABS-KEY(Database system) OR TITLE-ABS-KEY(Graph data model) OR TITLE-ABS-KEY(Decision support systems) OR TITLE-ABS-KEY(Graph theory) OR TITLE-ABS-KEY(Knowledge discovery in databases) OR TITLE-ABS-KEY(Recommender systems) OR TITLE-ABS-KEY(Electronic commerce) OR TITLE-ABS-KEY(DNA sequence) OR TITLE-ABS-KEY(Gene cluster) OR TITLE-ABS-KEY(Gene function) OR TITLE-ABS-KEY(Nucleotide sequence) OR TITLE-ABS-KEY(Chromosome map) OR TITLE-ABS-KEY(Computational Biology) OR TITLE-ABS-KEY(Bioinformatics) OR TITLE-ABS-KEY(Cellular automata) OR TITLE-ABS-KEY(Protein folding) OR TITLE-ABS-KEY(Computer vision) OR TITLE-ABS-KEY(Quantitative evaluation) OR TITLE-ABS-KEY(Stereo correspondence) OR TITLE-ABS-KEY(Stereo vision) OR TITLE-ABS-KEY(3D reconstruction) OR TITLE-ABS-KEY(Image coding) OR TITLE-ABS-KEY(Image segmentation) OR TITLE-ABS-KEY(Motion estimation) OR TITLE-ABS-KEY(Stereo correspondence) OR TITLE-ABS-KEY(Histology images) OR TITLE-ABS-KEY(Image analysis))'
     social_semantic = '%s AND %s'%(profesores,conceptos)
     direccion_cod = codificar_a_url(revistas)
-    json_eids_revistas = urlopen('http://127.0.0.1:5001/obtenerEid/?consulta=%s'%(direccion_cod))
+    json_eids_revistas = urlopen('http://127.0.0.1:5000/obtenerEid/?consulta=%s'%(direccion_cod))
     eids_revistas = json.load(json_eids_revistas)['eids']
     eids_revistas = map(str, eids_revistas)
     print profesores
@@ -40,9 +40,9 @@ def peticion_tesis_cesar():
     diccionario_peticion = {"j":eids_revistas, "s":eids_profesores, "clasificar":eids_revistas, "a": eids_direccion, "o":eids_social_semantic}
     print str(diccionario_peticion)
     consultica = str(diccionario_peticion).replace('\'','"')
-    consulta = 'http://127.0.0.1:5000/clasificacionUnidadAcademica/?datosJson=%s'%(consultica)
+    consulta = 'http://127.0.0.1:50001/clasificacionUnidadAcademica/?datosJson=%s'%(consultica)
     print consulta
-    json_clasificados = urlopen('http://127.0.0.1:5000/clasificacionUnidadAcademica/?datosJson=%s'%(codificar_a_url(consultica)))
+    json_clasificados = urlopen('http://127.0.0.1:50001/clasificacionUnidadAcademica/?datosJson=%s'%(codificar_a_url(consultica)))
     print json_clasificados.read()
 
 def codificar_a_url(consulta):
@@ -51,7 +51,7 @@ def codificar_a_url(consulta):
 
 def obtener_conjunto(consulta):
     consulta_cod = codificar_a_url(consulta)
-    json_eids_conjunto = urlopen('http://127.0.0.1:5001/obtenerEid/?consulta=%s'%(consulta_cod))
+    json_eids_conjunto = urlopen('http://127.0.0.1:5000/obtenerEid/?consulta=%s'%(consulta_cod))
     eids = json.load(json_eids_conjunto)['eids']
     eids = map(str, eids)
     return eids
