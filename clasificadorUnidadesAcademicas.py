@@ -41,7 +41,7 @@ class ClasificadorUnidadesAcademicas:
         nv = NaiveBayes(open(nombre_entrenamiento), open(nombre_prueba))
         nv.medidas()
         eids_relevantes = self.get_eids_relevantes(nv.clasificadosNB)
-        return nv.clasificadosNB
+        return eids_relevantes
 
     def get_eids_relevantes(self, clasificaciones):
         eids_relevantes = []
